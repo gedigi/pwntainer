@@ -12,12 +12,12 @@ A Docker container for pwning
 | frida | https://github.com/frida/frida |
 | libcdb | https://github.com/niklasb/libc-database |
 
-# Quick and Dirty
+# Run - quick and dirty
 ```bash
 $ docker run -ti gedigi/pwntainer bash
 ```
 
-# Build
+# Build + Run
 Clone the repo, then run:
 ```bash
 $ docker -t pwntainer build .
