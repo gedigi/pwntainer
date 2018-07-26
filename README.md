@@ -20,7 +20,7 @@ $ docker run -ti gedigi/pwntainer bash
 # Build + Run
 Clone the repo, then run:
 ```bash
-$ docker -t pwntainer build .
+$ docker build -t pwntainer .
 ```
 
 Then:
