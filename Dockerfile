@@ -6,7 +6,7 @@ RUN apt-get -fy upgrade
 # install main packages
 RUN apt-get install -fy build-essential gdb libc6-i386 libc6:i386 python \
  python3 python-pip python3-pip cmake wget git net-tools locales vim tmux ruby \
- socat netcat-traditional curl
+ socat netcat-traditional curl gcc-multilib
 
 # install pwntools
 RUN pip install pwntools
