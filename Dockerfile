@@ -6,7 +6,7 @@ RUN apt-get -fy upgrade
 # install main packages
 RUN apt-get install -fy build-essential gdb libc6-i386 libc6:i386 python \
  python3 python-pip python3-pip cmake wget git net-tools locales vim tmux ruby \
- socat netcat-traditional curl gcc-multilib
+ socat netcat-traditional curl gcc-multilib strace
 
 # install pwntools
 RUN pip install pwntools
@@ -50,6 +50,8 @@ RUN ln -s \
 # install a nice .vimrc
 RUN git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 RUN sh ~/.vim_runtime/install_awesome_vimrc.sh
+
+RUN apt-get clean
 
 # go back to ~
  WORKDIR "/root"
