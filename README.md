@@ -14,8 +14,10 @@ A Docker container for pwning
 
 # Run - quick and dirty
 ```bash
-$ docker run -ti gedigi/pwntainer bash
+$ docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -ti gedigi/pwntainer bash
 ```
+
+In order to run gdb within the container you need to run it with the default seccomp profile disabled and add the ptrace capability.
 
 # Build + Run
 Clone the repo, then run:
@@ -25,5 +27,5 @@ $ docker build -t pwntainer .
 
 Then:
 ```bash
-$ docker run -ti pwntainer bash
+$ docker run --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -ti pwntainer bash
 ```
